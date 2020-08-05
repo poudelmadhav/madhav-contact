@@ -31,5 +31,12 @@ module MadhavContact
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
   end
 end
