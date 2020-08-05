@@ -1,0 +1,22 @@
+<h1>You got a new email</h1>
+<p>Here is details:</p>
+
+<% if @name.present? %>
+  <b>Name: <%= @name %></b><br><br>
+<% end %>
+
+<% if @email.present? %>
+  <b>Email: <%= @email %></b><br></br>
+<% end %>
+
+<% if @website.present? %>
+  <b>Email: <%= @website %></b><br></br>
+<% end %>
+
+<% if @subject.present? %>
+  <b>Email: <%= @subject %></b><br></br>
+<% end %>
+
+<% if @message.present? %>
+  <b>Email: <%= @message %></b><br></br>
+<% end %>
