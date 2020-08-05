@@ -2,9 +2,12 @@
 class ContactPreview < ActionMailer::Preview
   def execute
     data = {
+      _email: "poudelmadhav143@gmail.com",
+      _subject: "poudelmadhav143@gmail.com",
       name: "Madhav Paudel",
       email: "madhav@namespace.jp",
-      _email: "poudelmadhav143@gmail.com"
+      subject: "How are you doing?",
+      message: "Hellow there, Are you fine?"
     }
     ContactMailer.execute(data)
   end

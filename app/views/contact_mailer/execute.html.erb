@@ -1,22 +1,69 @@
-<h1>You got a new email</h1>
-<p>Here is details:</p>
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%" width="100%">
+   <tbody>
+      <tr>
+         <td align="center" style="vertical-align:top;padding:0 0 22px" valign="top">
+            Hey there,<br><br>
+            Someone just submitted your form on your website. Here's what they had to
+            say:
+         </td>
+      </tr>
+   </tbody>
+</table>
 
-<% if @name.present? %>
-  <b>Name: <%= @name %></b><br><br>
-<% end %>
-
-<% if @email.present? %>
-  <b>Email: <%= @email %></b><br></br>
-<% end %>
-
-<% if @website.present? %>
-  <b>Email: <%= @website %></b><br></br>
-<% end %>
-
-<% if @subject.present? %>
-  <b>Email: <%= @subject %></b><br></br>
-<% end %>
-
-<% if @message.present? %>
-  <b>Email: <%= @message %></b><br></br>
-<% end %>
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%;text-align:left" width="100%" align="left">
+   <tbody>
+      <tr>
+         <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" style="width:100%" width="100%">
+               <tbody>
+                  <% if @name.present? %>
+                    <tr>
+                       <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px;border-bottom:#e3e3da 1px solid;font-size:14px" valign="top">
+                          <strong>Name:</strong><br>
+                          <pre style="white-space:pre-line;font-family:inherit;margin:0"><%= @name %></pre>
+                       </td>
+                    </tr>
+                  <% end %>
+                  <% if @email.present? %>
+                    <tr>
+                       <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px;border-bottom:#e3e3da 1px solid;font-size:14px" valign="top">
+                          <strong>Email:</strong><br>
+                          <pre style="white-space:pre-line;font-family:inherit;margin:0"><a href="mailto:<%= @email %>"><%=  @email %></a></pre>
+                       </td>
+                    </tr>
+                  <% end %>
+                  <% if @website.present? %>
+                    <tr>
+                       <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px;border-bottom:#e3e3da 1px solid;font-size:14px" valign="top">
+                          <strong>Website:</strong><br>
+                          <pre style="white-space:pre-line;font-family:inherit;margin:0"><%= @website %></pre>
+                       </td>
+                    </tr>
+                  <% end %>
+                  <% if @subject.present? %>
+                    <tr>
+                       <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px;border-bottom:#e3e3da 1px solid;font-size:14px" valign="top">
+                          <strong>Subject:</strong><br>
+                          <pre style="white-space:pre-line;font-family:inherit;margin:0"><%= @subject %></pre>
+                       </td>
+                    </tr>
+                  <% end %>
+                  <% if @message.present? %>
+                    <tr>
+                       <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px;border-bottom:#e3e3da 1px solid;font-size:14px" valign="top">
+                          <strong>Message:</strong><br>
+                          <pre style="white-space:pre-line;font-family:inherit;margin:0"><%= @message %></pre>
+                       </td>
+                    </tr>
+                  <% end %>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+      <tr align="center" style="padding:0 0 22px">
+         <td style="vertical-align:top;font-family:&quot;Source Code Pro&quot;,monospace;padding:11px" valign="top">
+            <span style="color:#918f8d;font-size:12px">Submitted <%= Time.zone.now.in_time_zone("Asia/Kathmandu").strftime("%I:%M %p - %d %B %Y") %>.</span>
+         </td>
+      </tr>
+   </tbody>
+</table>
