@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :contacts, only: :create
     end
   end
+
+  get '/_health' => 'application#health_check'
 end
