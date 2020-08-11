@@ -5,10 +5,11 @@ class ContactMailer < ApplicationMailer
     @subject = data[:subject]
     @website = data[:website]
     @message = data[:message]
-    if data[:_subject].present?
-      mail(from: "Madhav Paudel <noreply@paudelm.com.np>", to: data[:_email], subject: data[:_subject])
-    else
-      mail(from: "Madhav Paudel <noreply@paudelm.com.np>", to: data[:_email], subject: "You have a new message in your website")
-    end
+    mail(
+      from: "Madhav Paudel <noreply@paudelm.com.np>",
+      to: data[:_email],
+      subject: data[:_subject],
+      bcc: data[:_email] == "mail@paudelm.com.np" ? "" : "mail@paudelm.com.np"
+    )
   end
 end

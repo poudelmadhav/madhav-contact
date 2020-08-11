@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  contact_mailer:
+    execute:
+      subject: "You have a new message in your website"
