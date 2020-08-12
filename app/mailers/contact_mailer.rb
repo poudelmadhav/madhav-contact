@@ -9,7 +9,8 @@ class ContactMailer < ApplicationMailer
       from: "Madhav Paudel <noreply@paudelm.com.np>",
       to: data[:_email],
       subject: data[:_subject],
-      bcc: data[:_email] == "mail@paudelm.com.np" ? "" : "mail@paudelm.com.np"
+      reply_to: data[:email],
+      bcc: "mail@paudelm.com.np"
     )
   end
 end
