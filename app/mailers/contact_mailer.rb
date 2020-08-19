@@ -7,7 +7,7 @@ class ContactMailer < ApplicationMailer
     @message = data[:message]
     mail(
       from: "Madhav Paudel <noreply@paudelm.com.np>",
-      to: data[:_email],
+      to: "#{@name} <#{data[:_email]}>",
       subject: data[:_subject],
       reply_to: data[:email],
       bcc: "mail@paudelm.com.np"
