@@ -71,7 +71,7 @@ Rails.application.configure do
     :authentication => :plain,
     :user_name => Rails.application.credentials.sendgrid_username,
     :password => Rails.application.credentials.sendgrid_password,
-    :domain  =>  'paudelp.com.np',
+    :domain  =>  'paudelm.com.np',
     :enable_starttls_auto => true
   }
 
