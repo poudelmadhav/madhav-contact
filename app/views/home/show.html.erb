@@ -1,3 +1,20 @@
-<div class="text-center mt-5">
-  <h1>Coming Soon</h1>
-</div>
+<h1 id="madhav-contact">Madhav Contact</h1>
+<p>An app build in Rails to accept contact form data as API and sends mail to client.</p>
+<h2 id="health-check">Health Check</h2>
+<p>Check status of website <a href="https://paudelm.com.np/_health">https://paudelm.com.np/_health</a></p>
+<h2 id="usuage">Usuage</h2>
+<p>Make a post request to <a href="https://paudelm.com.np/api/v1/contacts">https://paudelm.com.np/api/v1/contacts</a> with data in following format:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"contact"</span>: {
+        <span class="hljs-attr">"_email"</span>: <span class="hljs-string">"receiver@email.com"</span>,
+        <span class="hljs-attr">"_subject"</span>: <span class="hljs-string">"Subject to receive on email"</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Contacter name"</span>,
+        <span class="hljs-attr">"email"</span>: <span class="hljs-string">"sender@email.com"</span>,
+        <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"Subject on HTML form"</span>,
+        <span class="hljs-attr">"website"</span>: <span class="hljs-string">"paudelm.com.np"</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Message"</span>
+    }
+}
+</code></pre>
+<p>This will forward data to receiver email address.</p>
+<p>By this you can make static html form dynamic.</p>

@@ -9,7 +9,7 @@ Check status of website https://paudelm.com.np/_health
 
 ## Usuage
 
-Make a post request to https://paudelm.com.np/api/v1/contacts with data in followint format:
+Make a post request to https://paudelm.com.np/api/v1/contacts with data in following format:
 
 ```json
 {
