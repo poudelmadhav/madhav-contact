@@ -6,7 +6,6 @@ class ContactMailer < ApplicationMailer
     @website = data[:website]
     @message = data[:message]
     mail(
-      from: "Madhav Paudel <noreply@paudelm.com.np>",
       to: "#{@name} <#{data[:_email]}>",
       subject: data[:_subject],
       reply_to: data[:email],
